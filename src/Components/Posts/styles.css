@@ -1,0 +1,22 @@
+.postsWrapper {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .postCard {
+    background-color: #acc4f3;
+    border: 1px solid #032261;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+    transition: transform 100ms ease-in-out;
+  }
+  .postCard:hover {
+    transform: scale(1.05);
+  }
+  .postCard img {
+    max-width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  
