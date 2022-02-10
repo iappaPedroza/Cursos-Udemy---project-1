@@ -5,9 +5,9 @@
 <div align="center">
 
 <img src = "https://img.shields.io/static/v1?label=license&message=GNU&color=<COLOR>&style=<STYLE>&logo=<LOGO>" />
-<img src = "https://img.shields.io/static/v1?label=node&message=v12.18.2&color=blue&style=<STYLE>&logo=<LOGO>" />
-<img src = "https://img.shields.io/static/v1?label=yarn&message=v1.22.4&color=blue&style=<STYLE>&logo=<LOGO>" />
-<img src = "https://img.shields.io/static/v1?label=webe&message=reactjs&color=7159c1&style=<STYLE>&logo=<LOGO>" />
+<img src = "https://img.shields.io/static/v1?label=node&message=v16.14.0&color=green&style=<STYLE>&logo=<LOGO>" />
+<img src = "https://img.shields.io/static/v1?label=yarn&message=v1.22.15&color=blue&style=<STYLE>&logo=<LOGO>" />
+<img src = "https://img.shields.io/static/v1?label=web&message=reactjs&color=7159c1&style=<STYLE>&logo=<LOGO>" />
 <img src = "https://img.shields.io/static/v1?label=</>&message=Javascript&color=yellow&style=<STYLE>&logo=<LOGO>" />
 
 </div>
