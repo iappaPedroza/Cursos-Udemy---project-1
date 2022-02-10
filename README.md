@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Simulador de Posts
+## Uma versão Incial em React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+<img src = "https://img.shields.io/static/v1?label=license&message=GNU&color=<COLOR>&style=<STYLE>&logo=<LOGO>" />
+<img src = "https://img.shields.io/static/v1?label=node&message=v12.18.2&color=blue&style=<STYLE>&logo=<LOGO>" />
+<img src = "https://img.shields.io/static/v1?label=yarn&message=v1.22.4&color=blue&style=<STYLE>&logo=<LOGO>" />
+<img src = "https://img.shields.io/static/v1?label=webe&message=reactjs&color=7159c1&style=<STYLE>&logo=<LOGO>" />
+<img src = "https://img.shields.io/static/v1?label=</>&message=Javascript&color=yellow&style=<STYLE>&logo=<LOGO>" />
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Objetivo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Esse projeto é desenvolvido com o React JS, Next. É resultado em andamento do Curso de React JS + Next JS - Full Stack Developer da Udemy, do qual fiz parte em Janeiro de 2022 em diante.
 
-### `npm test`
+## 📦 Instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/iappaPedroza/Cursos-Udemy---project-1.git
+```
 
-### `npm run build`
+```bash
+npm install || yarn
+```
+  
+## :question: Como utilizar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+:red_circle:  Antes de começar, tenha instalado em sua máquina o seguinte:
+> No projeto foi utilizado o
+[yarn](https://yarnpkg.com/getting-started/install)
+como gerenciador de pacotes, o qual recomendo fortemente, mas pode ser utilizado o npm.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **[Git][git]**
+- **[Nodejs][node]**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔗 Rodando o app
 
-### `npm run eject`
+```sh
+# Abrindo o projeto no terminal:
+$ cd ./Cursos-Udemy---project-1
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Executando a aplicação: 
+$ yarn start
+```
+## **:page_with_curl: LICENÇA**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Esse repositório está licenciado pela **GNU LICENSE**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h3 align="center">
+Feito com :blue_heart: por <a href="https://www.linkedin.com/in/iapon%C3%A3-pedroza-90b1422b/">Iappa Pedroza</a>
+<br><br>
+</h3>
+  
+  <!-- Techs -->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[react]: https://reactjs.org/
 
-## Learn More
+[typescript]: https://www.typescriptlang.org/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[node]: https://nodejs.org/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[mongodb]: https://www.mongodb.com/
 
-### Code Splitting
+[vscode]: https://code.visualstudio.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[react_native]: http://www.reactnative.com/
 
-### Analyzing the Bundle Size
+[express]: https://expressjs.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[cors]: https://expressjs.com/en/resources/middleware/cors.html
 
-### Making a Progressive Web App
+[axios]: https://github.com/axios/axios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[yarn]: https://classic.yarnpkg.com/en/docs/install/#debian-stable
 
-### Advanced Configuration
+[npm]: https://www.npmjs.com/get-npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[git]: https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[jsonwebtoken]: https://jwt.io/
