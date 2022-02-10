@@ -1,5 +1,5 @@
 # Simulador de Posts
-## Uma versão Inicial em React JS
+## Uma versão Incial em React JS
 
 
 <div align="center">
