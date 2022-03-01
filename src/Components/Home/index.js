@@ -14,7 +14,7 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
     const [allPosts, setAllPosts] = useState([]);
     const [page, setPage] = useState(0);
-    const [postsPerPage] = useState(9);
+    const [postsPerPage] = useState(10);
     const [searchValue, setSearchValue] = useState('');
 
     const noMorePosts = page + postsPerPage >= allPosts.length;
@@ -86,7 +86,7 @@ export default function Home() {
       <section className='container'>
         {!searchValue && (
           <Button 
-          text="Load more Posts..."
+          text="Carregar mais Posts..."
           action={loadMorePosts}
           disabled={noMorePosts}
           />
