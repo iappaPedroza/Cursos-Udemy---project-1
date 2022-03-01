@@ -45,7 +45,7 @@ export default function Home() {
       useEffect(() => {
         console.log(new Date().toLocaleString('pt-br'));
           carregaPosts(0, postsPerPage);
-      }, [carregaPosts, page, postsPerPage]);
+      }, [carregaPosts, postsPerPage]);
 
         
         const loadMorePosts = async () => {
