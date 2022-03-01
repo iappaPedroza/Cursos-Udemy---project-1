@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 import './styles.css';
 
@@ -8,51 +8,17 @@ import User from '../Users';
 import { Button } from '../Button';
 import { SearchInput } from '../SearchInput';
 
-export default class Home extends Component {
-  state = {       
-    posts: [],
-    allPosts: [],
-    page: 0,
-    postsPerPage: 10,
-    searchValue: ''
-  };
 
-  async componentDidMount() {
-    await this.carregaPosts();  
-  }
+export default function Home() {
   
-  carregaPosts = async () => {
-    const {page, postsPerPage} = this.state;
-    const postsAndPhotos = await loadPosts();
-    this.setState({ 
-      posts: postsAndPhotos.slice(page, postsPerPage),
-      allPosts: postsAndPhotos
-    });
-  }
-  
-  loadMorePosts = async () => {
-    const {
-      page,
-      postsPerPage,
-      allPosts,
-      posts
-    } = this.state;
-    const nextPage = page + postsPerPage;
-    const nextPosts = allPosts.slice(nextPage, nextPage + postsPerPage );
-    posts.push(...nextPosts);
-    
-    this.setState({ posts, page: nextPage});
-  };
-  
-  handleSearch = (e) => {
-      const {value} = e.target;
-      this.setState({ searchValue: value });
-  }
+    const [posts, setPosts] = useState([]);
+    const [allPosts, setAllPosts] = useState([]);
+    const [page, setPage] = useState(0);
+    const [postsPerPage] = useState(9);
+    const [searchValue, setSearchValue] = useState('');
 
-  render() {
-    const {  posts, page, postsPerPage, allPosts, searchValue  } = this.state;
     const noMorePosts = page + postsPerPage >= allPosts.length;
-    
+
     const filteredPosts = !!searchValue ? 
       allPosts.filter(post => {
         return (
@@ -67,45 +33,75 @@ export default class Home extends Component {
       :
       posts;
 
-    return (
-      <div className="App">
-        <User />
-        <section className='container'>
+      const carregaPosts = useCallback(async (page, postsPerPage) => {
           
-          {!!searchValue &&(
-            
-              <div>
-                <h2>Sua busca:</h2> 
-                <p>{ searchValue }</p>
-              </div>
-            
-          )}
+        const postsAndPhotos = await loadPosts();
+        
+        setPosts(postsAndPhotos.slice(page, postsPerPage));
+        setAllPosts( postsAndPhotos );
+      },[])
+      
+
+      useEffect(() => {
+        console.log(new Date().toLocaleString('pt-br'));
+          carregaPosts(0, postsPerPage);
+      }, [carregaPosts, page, postsPerPage]);
+
+        
+        const loadMorePosts = async () => {
           
-          <SearchInput 
-            inputValue={searchValue} 
-            actionFn={this.handleSearch} 
+          const nextPage = page + postsPerPage;
+          const nextPosts = allPosts.slice(nextPage, nextPage + postsPerPage );
+          posts.push(...nextPosts);
+          
+          setPosts(posts);
+          setPage(nextPage);
+        };
+        
+        const handleSearch = (e) => {
+            const {value} = e.target;
+            setSearchValue(value)
+        }
+        
+
+  return (
+    <div className="App">
+      <User />
+      <section className='container'>
+        
+        {!!searchValue &&(
+          
+            <div>
+              <h2>Sua busca:</h2> 
+              <p>{ searchValue }</p>
+            </div>
+          
+        )}
+        
+        <SearchInput 
+          inputValue={searchValue} 
+          actionFn={handleSearch} 
+        />
+      </section>
+      <section className='container'>
+        {!searchValue && (
+          <Button 
+          text="Load more Posts..."
+          action={loadMorePosts}
+          disabled={noMorePosts}
           />
-        </section>
-        <section className='container'>
-          {!searchValue && (
-            <Button 
-            text="Load more Posts..."
-            action={this.loadMorePosts}
-            disabled={noMorePosts}
-            />
-          )}
-          {filteredPosts.length > 0 && (
-            <Posts posts={ filteredPosts } />
-          )}
-          {filteredPosts.length === 0 && (
-            <h3>Não existem Posts para sua busca.</h3>
-          )}
-            
-          <div className='btnContainer'>
-            
-          </div>
-        </section>
-      </div>
-    );
-  }
+        )}
+        {filteredPosts.length > 0 && (
+          <Posts posts={ filteredPosts } />
+        )}
+        {filteredPosts.length === 0 && (
+          <h3>Não existem Posts para sua busca.</h3>
+        )}
+          
+        <div className='btnContainer'>
+          
+        </div>
+      </section>
+    </div>
+  );
 }
